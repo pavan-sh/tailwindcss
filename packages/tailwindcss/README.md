@@ -27,7 +27,7 @@ For full documentation, visit [tailwindcss.com](https://tailwindcss.com).
 
 ## Community
 
-For help, discussion about best practices, or feature ideas:
+For help, discussion of best practices, or feature ideas:
 
 [Discuss Tailwind CSS on GitHub](https://github.com/tailwindlabs/tailwindcss/discussions)
 
