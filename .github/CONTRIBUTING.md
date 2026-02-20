@@ -8,6 +8,14 @@ Before getting started, ensure your system has access to the following tools:
 - [Rustup](https://rustup.rs/)
 - [pnpm](https://pnpm.io/)
 
+> **Note**: This repo pins the pnpm version via the `packageManager` field in `package.json`.
+> If you have issues installing dependencies, enable Corepack and let it install the correct pnpm version:
+>
+> ```sh
+> corepack enable
+> pnpm -v
+> ```
+
 ## Getting started
 
 ```sh
