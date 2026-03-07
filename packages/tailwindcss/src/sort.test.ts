@@ -39,7 +39,8 @@ test.each(table)('sorts classes: "%s" -> "%s"', async (input, expected) => {
   expect(sortClasses(input, await loadDesign())).toEqual(expected)
 })
 
-test.skip('group, peer, and dark have their own order', async () => {
+test('group, peer, and dark have their own order', async () => {
+  // Shuffle to ensure sort is deterministic regardless of input order.
   let input = shuffle(['group', 'peer', 'dark']).join(' ')
   expect(sortClasses(input, await loadDesign())).toEqual('dark group peer')
 })
