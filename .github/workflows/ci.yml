@@ -108,7 +108,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npm run test:ui
+        run: pnpm --filter tailwindcss test:ui
 
   notify:
     if: ${{ always() && github.ref == 'refs/heads/main' && needs.tests.result == 'failure' }}
