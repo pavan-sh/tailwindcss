@@ -1498,11 +1498,13 @@ test("::first-letter can receive a border with just the 'border' utility", async
 
 // `getComputedStyle` doesn't work in Chrome/Safari on `::file-selector-button`
 // for some reason at the moment, so we can't actually verify the computed
-// style. It does work in Firefox, so maybe we can update this one test to run
-// against Firefox and let the rest run against Chrome/Safari.
-test.skip("::file-selector-button can receive a border with just the 'border' utility", async ({
+// style there. It does work in Firefox, so we run this assertion only on
+// Firefox and skip it on other browsers.
+test("::file-selector-button can receive a border with just the 'border' utility", async ({
   page,
+  browserName,
 }) => {
+  test.skip(browserName !== 'firefox', 'Computed style is only reliable in Firefox')
   let { getPropertyValue } = await render(
     page,
     html`<input id="x" type="file" class="file:border file:border-black" />`,
