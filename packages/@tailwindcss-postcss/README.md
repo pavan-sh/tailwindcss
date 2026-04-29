@@ -102,10 +102,9 @@ export default {
     tailwindcss({
       // Disable `url(…)` rewriting
       transformAssetUrls: false,
-
-      // Enable `url(…)` rewriting (the default)
-      transformAssetUrls: true,
     }),
   ],
 }
 ```
+
+`transformAssetUrls: true` is the default behavior.
